@@ -45,5 +45,53 @@ public class MarkdownParseTest {
         strList=MarkdownParse.getLinks(content);
         assertEquals(strList, List.of());
     }
-
+    @Test
+    public void testGetlinksExtraTwo() throws IOException{
+        Path file = Path.of("test-file2.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of("https://something.com","some-page.html"));
+    }
+    @Test
+    public void testGetlinksExtraThree() throws IOException{
+        Path file = Path.of("test-file3.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of());
+    }
+    @Test
+    public void testGetlinksExtraFour() throws IOException{
+        Path file = Path.of("test-file4.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of());
+    }
+    @Test
+    public void testGetlinksExtraFive() throws IOException{
+        Path file = Path.of("test-file5.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of("page.com"));
+    }
+    @Test
+    public void testGetlinksExtraSix() throws IOException{
+        Path file = Path.of("test-file6.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of());
+    }
+    @Test
+    public void testGetlinksExtraSeven() throws IOException{
+        Path file = Path.of("test-file7.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of());
+    }
+    @Test
+    public void testGetlinksExtraEight() throws IOException{
+        Path file = Path.of("test-file8.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of());
+    }
 }
