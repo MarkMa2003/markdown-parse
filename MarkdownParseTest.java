@@ -71,14 +71,14 @@ public class MarkdownParseTest {
         Path file = Path.of("test-file5.md");
         String content=Files.readString(file);
         strList=MarkdownParse.getLinks(content);
-        assertEquals(strList, List.of("page.com"));
+        assertEquals(strList, List.of());
     }
     @Test
     public void testGetlinksExtraSix() throws IOException{
         Path file = Path.of("test-file6.md");
         String content=Files.readString(file);
         strList=MarkdownParse.getLinks(content);
-        assertEquals(strList, List.of());
+        assertEquals(strList, List.of("page.com"));
     }
     @Test
     public void testGetlinksExtraSeven() throws IOException{
