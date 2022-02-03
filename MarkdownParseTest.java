@@ -94,4 +94,12 @@ public class MarkdownParseTest {
         strList=MarkdownParse.getLinks(content);
         assertEquals(strList, List.of());
     }
+
+    @Test
+    public void testBadLink() throws IOException{
+        Path file = Path.of("newtestfile.md");
+        String content=Files.readString(file);
+        strList=MarkdownParse.getLinks(content);
+        assertEquals(strList, List.of());
+    }
 }
