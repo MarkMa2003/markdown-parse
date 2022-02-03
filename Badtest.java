@@ -3,6 +3,6 @@ import org.junit.*;
 public class Badtest {
   @Test
   public void failAdd(){
-    assertEquals(1+1, 10);
+    assertEquals(1+1, 2);
   }
 }
